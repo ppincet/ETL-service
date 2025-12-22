@@ -10,17 +10,16 @@ def process():
   timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
   filename = f"./{settings.SSH_FILE_IPREFIX}-{timestamp}.zip"
   wm: dict[str, datetime] = {}
-  # force.get_results(sf)
- 
+  
   if zip.upload_file(sf,  filename, wm) == constants.ETL_SUCCESS:
     print(f'filename:{filename}')
     if ssh.upload(sf, conn, filename) == constants.ETL_SUCCESS:
       force.upsert_wm(sf, wm)
       print('done')
-  # try:
-  #   Path(filename).unlink()
-  # except FileNotFoundError:
-  #   print('nothing to remove')
+  try:
+    Path(filename).unlink()
+  except FileNotFoundError:
+    print('nothing to remove')
       
 
 
