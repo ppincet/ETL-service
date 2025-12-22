@@ -28,15 +28,18 @@
         - Master FK (in current version relates to Id field in details)
 
 Examples:
+### Entities structure
 ![Entities](./assets/Entities--main.png)
 
+### Staff users
 ![Users(Staff)](./assets/Concrete%20entity.png)
 
+### Full recordset for Staff Users
 ![Users(Staff)](./assets/Details.png)
 
 
 ### Deltas Managing
-    There is object `Watermark__c` that contains last modified date for each object in salesforce. It get used in where clause 
+    There is an object `Watermark__c` that contains last modified date for each mapped object in salesforce. It get used in where clause 
     like 
 
 ```bash
@@ -45,3 +48,9 @@ WHERE SystemModStamp > :watermark
 
 ### Exceptions
     Service fires salesforce platform event on exception and it get handled inside saleforce (loggin & warning users)
+
+### Deletion mgmnt
+
+        All deleted records are stored in Deletion_Log__c object and reflected in csv in `status` column as `D` 
+    (along with `C` for created records and `U` for updated). For Users direct deletion is not supported  in 
+    salesforce so `isActive` field  reflects status.
