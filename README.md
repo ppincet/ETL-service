@@ -28,3 +28,5 @@ Examples:
 ![Entities](./assets/Entities--main.png)
 
 ![Users(Staff)](./assets/Concrete%20entity.png)
+
+![Users(Staff)](./assets/Details.png)
