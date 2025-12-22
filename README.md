@@ -53,4 +53,5 @@ WHERE SystemModStamp > :watermark
 
         All deleted records are stored in Deletion_Log__c object and reflected in csv in `status` column as `D` 
     (along with `C` for created records and `U` for updated). For Users direct deletion is not supported  in 
-    salesforce so `isActive` field  reflects status.
+    salesforce so `isActive` field  reflects status. Each sObject must have afterDelete and afterUndelete triggers.
+    Class DeletionLogHelper deals with deletion and undeletion.
