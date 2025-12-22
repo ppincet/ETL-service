@@ -24,7 +24,7 @@
         - Details Source (rel to ETL_Entities_Mapping)
         - Master FK (in current version relates to Id field in details)
 
-        Examples:
-        ![Entities](./assets/Entities--main.png)
+Examples:
+![Entities](./assets/Entities--main.png)
 
-        ![Users(Staff)](./assets/Concrete entity.png)
+![Users(Staff)](./assets/Concrete entity.png)
