@@ -41,3 +41,7 @@ Examples:
 
 ```bash
 WHERE SystemModStamp > :watermark
+```
+
+### Exceptions
+    Service fires salesforce platform event on exception and it get handled inside saleforce (loggin & warning users)
