@@ -38,5 +38,5 @@ Examples:
 ### Deltas Managing
     Ther is object `Watermark__c` that contains last modified date for each object in salesforce. It get used in where clause 
     like 
-'''apex
+```bash
 WHERE SystemModStamp > :watermark
