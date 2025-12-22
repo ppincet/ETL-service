@@ -3,3 +3,4 @@ cryptography
 pyjwt
 requests
 python-dotenv
+paramiko
