@@ -10,7 +10,7 @@ def get_mappings(sf):
     """
         Returns mapping froms SF Metadata
 
-        we dont need to implement generator - we are sure we have more less than 2k recs
+        we dont need to implement generator - we are sure we have less than 2k recs
     """
     mapping_statement = """
         SELECT 
