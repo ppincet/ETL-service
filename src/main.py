@@ -29,8 +29,9 @@ def main():
             # stop_event.set()
     except Exception as e:
         #if settings.DEBUG:
+        print(f'possible step:{str(e)}')
         force.log(sf, common.crushWrapper(traceback.format_exc()[-32000:], str(e)))
-        traceback.print_exc()
+        #traceback.print_exc()
         sys.exit(1)
 if __name__ == "__main__":
     main()

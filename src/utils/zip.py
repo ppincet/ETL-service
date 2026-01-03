@@ -31,6 +31,7 @@ def upload_file(sf, zip_filename,wm):
                             header_size = len(header_row.encode('utf-8'))
                             total_size += header_size
                         csv_entry.write(header_row.encode('utf-8'))
+                        print(f'header:{header_row.encode('utf-8')}')
                         file_header_written = True
                     else:
                         pass
@@ -48,6 +49,7 @@ def upload_file(sf, zip_filename,wm):
             finally:
                 if csv_entry:
                     csv_entry.close()
+    print(f'total:{total_size} vs header:{header_size}')
     return constants.ETL_SUCCESS if total_size > header_size else constants.ETL_EMPTY
 
 
